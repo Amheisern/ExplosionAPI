@@ -11,5 +11,11 @@ namespace ExplosionAPI.Controllers
     [ApiController]
     public class ExplosionController : ControllerBase
     {
+        [HttpGet("{number}")]
+        public string Explode(string number)
+        {
+            if (number)
+                return string.Join("", number.Select(c => new String(c, int.Parse(c.ToString()))));
+        }
     }
 }

@@ -14,8 +14,16 @@ namespace ExplosionAPI.Controllers
         [HttpGet("{number}")]
         public string Explode(string number)
         {
-            if (number)
-                return string.Join("", number.Select(c => new String(c, int.Parse(c.ToString()))));
+            int num = 0;
+            if (!int.TryParse(number, out num))
+            {
+                return "That is not an number";
+            }
+            else
+            {
+                //return string.Join("", number.Select(character => new String(character, int.Parse(character.ToString()))));
+                return string.Join("", number.Select(character => new String(character, int.Parse(character.ToString()))));
+            }
         }
     }
 }

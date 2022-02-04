@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "..\\..\\BasicAPI"
+	},
+	{
+		"path": "..\\..\\ApiClient"
+	}
+],
+  "settings": {}
+}
